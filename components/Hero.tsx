@@ -17,30 +17,32 @@ const Hero = () => {
             duration: 1,
             stagger: 0.15,
             skewY: 3,
+            delay: 1,
         })
             .from(".hero-sub-text", {
                 y: 20,
                 opacity: 0,
                 duration: 0.8,
-            }, "-=0.5")
+                delay: 1,
+            }, "-=1")
             .from(".hero-btn", {
                 y: 20,
                 opacity: 0,
                 stagger: 0.1,
                 duration: 0.8
-            }, "-=0.6")
+            }, "-=1")
             .from(".hero-desc", {
                 x: 20,
                 opacity: 0,
                 duration: 0.8
-            }, "-=0.6")
+            }, "-=1")
             .from(".hero-image", {
                 scale: 0.95,
                 opacity: 0,
-                duration: 1,
+                duration: 0.5,
                 stagger: 0.2,
                 ease: "power2.out"
-            }, "-=0.8");
+            }, "-=1");
 
     }, { scope: heroRef });
 

@@ -17,6 +17,7 @@ const Navbar = () => {
         tl.from(navRef.current, {
             scaleX: 0,
             duration: 1.2,
+            delay: 1,
             ease: "power3.out",
             transformOrigin: "center center"
         });

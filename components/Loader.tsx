@@ -18,7 +18,7 @@ const Loader = ({ onComplete }: { onComplete: () => void }) => {
 
         tl.to(counterObj, {
             value: 100,
-            duration: 1.5,
+            duration: 0.5,
             ease: "power2.inOut",
             onUpdate: () => {
                 setCount(Math.round(counterObj.value));
@@ -32,7 +32,7 @@ const Loader = ({ onComplete }: { onComplete: () => void }) => {
             })
             .to(loaderRef.current, {
                 yPercent: -100,
-                duration: 1,
+                duration: 0.5,
                 ease: "power4.inOut"
             });
 
