@@ -1,7 +1,19 @@
+import SmoothScroll from "@/components/SmoothScroll";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Bebas_Neue, Syne_Mono } from "next/font/google";
 import "./globals.css";
 
+const syneMono = Syne_Mono({
+  variable: "--font-syne-mono",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas-neue",
+  subsets: ["latin"],
+  weight: ["400"],
+});
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,8 +37,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${syneMono.variable} antialiased`}
       >
+        <SmoothScroll />
         {children}
       </body>
     </html>
